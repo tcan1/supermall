@@ -1,28 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <nev-bar class="nve-bar"><div slot="center">购物街</div></nev-bar>
+    <MainTabbar></MainTabbar>
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
 
+<script>
+import MainTabbar from '@/components/content/MainTabbar'
+import NveBar from 'common/nvebar/NveBar'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MainTabbar,
+    'nev-bar':NveBar
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import "assets/css/base.css";
+.nve-bar{
+  color: #fff;
+  background: #ff5777;
+  box-shadow: 0 1px 1px rgba(100,100,100,.1);
 }
 </style>
